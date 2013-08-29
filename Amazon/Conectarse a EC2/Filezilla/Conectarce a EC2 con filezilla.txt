@@ -1,0 +1,5 @@
+Conectar filezilla con Amazon EC2 http://www.cristiantala.cl/conectar-a-ec2-a-traves-de-filezilla/
+
+1. seleccionar la key .ppk o .pem (Filezilla tambien permite generar el .ppk apartir del .pem)
+2. Ir al gestor de sitios y configurarlo con la ip y el usuario de Linux (ec2-user) y seleccionar modo interactivo
+	

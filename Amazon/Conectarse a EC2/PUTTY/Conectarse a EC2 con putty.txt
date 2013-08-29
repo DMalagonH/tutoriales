@@ -1,0 +1,14 @@
+Conectarse a una instancia Amazon EC2 Linux
+http://docs.aws.amazon.com/es_es/AWSEC2/latest/GettingStartedGuide/ConnectToInstanceLinux.html
+
+1.	PARA WINDOWS
+- Descargar e instalar PUTTY http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+- abrir PuttyGen y generar la key para putty a partir del .pem de amazon
+- configurar putty con la key generada
+	- poner el nombre del usuario y ip de la instancia ec2 (ec2-user@la_ip)
+	- seleccionar la key generada
+	- guardar la sesion
+	- iniciar session
+	
+	
+
