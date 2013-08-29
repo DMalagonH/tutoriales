@@ -1,0 +1,38 @@
+PASOS PARA TRABAJAR UN REPOSITORIO GITHUB EN UNA CARPETA LOCAL
+
+1. Crear una cuenta en GITHUB
+2. Descargar e instalar Tortoise Git
+3. (Descargar e instalar Git Bash)
+4. Crear key (mi_key.ppk) para identificar el usuario:
+	4.1 abrir TortoiseGit/puttygen y generar key
+	4.2 copiar cadena generada
+	4.3 en la cuenta de github registrar una nueva key con la cadena generada en el paso anterior
+	4.5 volver a puttygen y guardar la key como privada en algun lugar seguro
+	4.6 Abrir TortoiseGit/Pageant
+	4.7 En la barra de tareas se carga un nuevo icono, abrirlo
+	4.8 Click en Add Key y seleccionar la key que se acaba de guardar
+	4.9 Cerrar
+5. Crear carpeta vacia donde se guardara el proyecto
+6. Descargar repositorio github y conectarse para realizar cargas al repositorio:
+	6.1 Descargar
+		- Click derecho sobre la nueva carpeta
+		- Click en TortoiseGit/pull
+		- Click en "Manage Remotes" esta en la parte inferior derecha de color azul
+		- Ingresar los datos en el formulario:
+			- Remote: nombre que se quiera dar a la conexion de descarga del repositorio
+			- URL: ruta del repositorio github IMPORTANTE: debe ser la ruta con protocolo SSH 
+			- Putty Key: seleccionar la key que se guardo anteriormente
+			- Aceptar
+		- Seleccionar el radiobutton Remote y escojer la conexion que se acaba de crear
+		- OK		
+	6.2 Cargar
+		- Click derecho sobre la carpeta
+		- Click en TortoiseGit/push
+		- Seleccionar el radiobutton Remote
+		- Click en el boton Manage y repetir los mismos pasos para crear la conexion (esta vez es una concecion de carga)
+		- Seleccionar la conexion que se acaba de crear 
+		- OK
+7. Una vez realizado el paso 6 ya no es necesario tener abierto el programa Pageant ni tampoco es necesario volver a crear las conexiones de carga y descarga
+		
+	
+
