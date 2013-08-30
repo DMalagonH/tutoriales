@@ -51,5 +51,5 @@ PASOS PARA TRABAJAR UN REPOSITORIO GITHUB EN UNA CARPETA LOCAL CON TORTOISEGIT
 		- Si sale un mensaje dar click en si
 7. Una vez realizado el paso 7 ya no es necesario tener abierto el programa Pageant ni tampoco es necesario volver a crear las conexiones de carga y descarga
 		
-	
+IMPORTANTE: el uso de la key para realizar push y pull a github a traves de tortoiseGit puede generar conflictos para el uso de push y pull bajo consola
 
