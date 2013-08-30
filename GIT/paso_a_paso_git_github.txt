@@ -47,7 +47,6 @@ PASOS PARA TRABAJAR UN REPOSITORIO GITHUB EN UNA CARPETA LOCAL CON TORTOISEGIT
 			- Putty Key: seleccionar la key que se guardo anteriormente
 			- Aceptar
 		- Seleccionar la conexion que se acaba de crear ("origin")
-		- deseleccionar el checbox Autoload Putty Key
 		- OK
 		- Si sale un mensaje dar click en si
 7. Una vez realizado el paso 7 ya no es necesario tener abierto el programa Pageant ni tampoco es necesario volver a crear las conexiones de carga y descarga
