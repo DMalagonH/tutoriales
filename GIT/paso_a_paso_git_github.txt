@@ -1,38 +1,56 @@
-PASOS PARA TRABAJAR UN REPOSITORIO GITHUB EN UNA CARPETA LOCAL
+PASOS PARA TRABAJAR UN REPOSITORIO GITHUB EN UNA CARPETA LOCAL CON TORTOISEGIT
 
 1. Crear una cuenta en GITHUB
 2. Descargar e instalar Tortoise Git
-3. (Descargar e instalar Git Bash)
+3. Descargar e instalar Git Bash
 4. Crear key (mi_key.ppk) para identificar el usuario:
 	4.1 abrir TortoiseGit/puttygen y generar key
 	4.2 copiar cadena generada
 	4.3 en la cuenta de github registrar una nueva key con la cadena generada en el paso anterior
 	4.5 volver a puttygen y guardar la key como privada en algun lugar seguro
-	4.6 Abrir TortoiseGit/Pageant
+	4.6 Abrir TortoiseGit/Pageant (Este paso puede no ser necesario, pero hacerlo para evitar posibles problemas)
 	4.7 En la barra de tareas se carga un nuevo icono, abrirlo
 	4.8 Click en Add Key y seleccionar la key que se acaba de guardar
 	4.9 Cerrar
-5. Crear carpeta vacia donde se guardara el proyecto
 6. Descargar repositorio github y conectarse para realizar cargas al repositorio:
-	6.1 Descargar
+	6.1 Pararse en la carpeta donde se quiere descargar el repositorio
+	6.2 Click derecho y seleccionar Git clone
+	6.3 en la ventana que se abre pegar la ruta https del repositorio en github
+	6.4 en el campo Load Putty Key seleccionar la key guardada anteriormente
+	6.5 OK
+	6.6 Los archivos ya deben estar en el pc
+7.  Cargar y descargar del repositorio
+	7.1 Descargar
 		- Click derecho sobre la nueva carpeta
 		- Click en TortoiseGit/pull
+		* Solamente en caso de no haber seleccionado la key antes (si ya se selecciono ignorar esto)
 		- Click en "Manage Remotes" esta en la parte inferior derecha de color azul
 		- Ingresar los datos en el formulario:
-			- Remote: nombre que se quiera dar a la conexion de descarga del repositorio
+			- Remote: nombre que se quiera dar a la conexion de descarga del repositorio (normalmente se usa "origin")
 			- URL: ruta del repositorio github IMPORTANTE: debe ser la ruta con protocolo SSH 
 			- Putty Key: seleccionar la key que se guardo anteriormente
 			- Aceptar
 		- Seleccionar el radiobutton Remote y escojer la conexion que se acaba de crear
 		- OK		
-	6.2 Cargar
+	7.2 Cargar
 		- Click derecho sobre la carpeta
-		- Click en TortoiseGit/push
-		- Seleccionar el radiobutton Remote
-		- Click en el boton Manage y repetir los mismos pasos para crear la conexion (esta vez es una concecion de carga)
-		- Seleccionar la conexion que se acaba de crear 
+		- Click en Git commit
+		- Ingresar descripcion de la consignacion(commit)
+		- seleccionar los archivos que desea subir o acutalizar al repositorio
 		- OK
-7. Una vez realizado el paso 6 ya no es necesario tener abierto el programa Pageant ni tampoco es necesario volver a crear las conexiones de carga y descarga
+		- En la ventana emergente seleccionar push
+		- En la ventana emergente seleccionar el radiobutton Remote
+		- Click en el boton Manage y repetir los mismos pasos para crear la conexion 
+		  (Si no se hace este paso cada vez que se haga push se pedira el usuario y contraseña de github)
+			- Remote: nombre que se quiera dar a la conexion de descarga del repositorio (normalmente se usa "origin")
+			- URL: ruta del repositorio github IMPORTANTE: debe ser la ruta con protocolo SSH 
+			- Putty Key: seleccionar la key que se guardo anteriormente
+			- Aceptar
+		- Seleccionar la conexion que se acaba de crear ("origin")
+		- deseleccionar el checbox Autoload Putty Key
+		- OK
+		- Si sale un mensaje dar click en si
+7. Una vez realizado el paso 7 ya no es necesario tener abierto el programa Pageant ni tampoco es necesario volver a crear las conexiones de carga y descarga
 		
 	
 
