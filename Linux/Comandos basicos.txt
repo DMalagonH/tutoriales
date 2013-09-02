@@ -1,0 +1,32 @@
+COMANDOS BASICOS PARA LINUX
+
+APACHE
+	Ubicacion de php.ini por defecto: /etc/php.ini
+	Raiz web por defecto: /var/www/html
+	
+	Reset apache: sudo service httpd restart
+	Detener apache: sudo service httpd stop
+	Iniciar apache: sudo service httpd start
+	
+	Contenido por defecto de /var/www
+		- cgi_bin
+		- error
+		- html
+		- icons
+	
+	
+OPERACIONES CON DIRECTORIOS
+	Eliminar un a carpeta con su contenido:
+		sudo rm -dfr ruta/de/la/carpeta
+		
+		
+	Permisos
+		Permisos a una carpeta y su contenido
+			chmod 777 -R dir_name
+		
+		
+ZIP
+	Comprimir una carpeta
+		tar -zcvf nombre-archivo.tar.gz nombre-directorio
+	Descomprimir un .zip
+		unzip archivo.zip
