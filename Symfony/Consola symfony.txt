@@ -1,0 +1,111 @@
+CONSOLA DE SYNFONY
+==================
+
+
+CREAR UN BUNDLE
+---------------
+
+	php app/console generate:bundle
+
+	Bundle namespace: AT/NameBundle   "AT" representa la agrupación de bundles de mayor jerarquía, "NameBundle" es la carpeta donde se almacenara el bundle
+
+	Bundle name [ATNameBundle]: NameBundle 	nombre del bundle, será utilizado en la aplicación, por defecto concatena el namespace y el nombre del bundle (“ATNameBundle”), pero debe dejarse solamente (“NameBundle”)
+
+	Target directory [C:/xampp/htdocs/proyecto/src]:  se deja el valor por defecto (enter)
+
+	Configuration format (yml, xml, php, or annotation) [annotation]: yml	formato de configuración, se usa yml 
+
+	Do you want to generate the whole directory structure [no]?  se deja el valor por defecto (enter)
+
+	Do you confirm generation [yes]? 	 (enter) 
+
+	Confirm automatic update of your kernel [yes]? 	(enter)
+
+	Confirm automatic update of your Routing [yes]? 	(enter)
+
+
+GENERAR CRUD
+------------
+
+	php app\console doctrine:generate:crud
+
+	The entity shortcut name: NameBundle:TbNombreTabla   nombre de la entidad, tener en cuenta que las entidades son nombradas de forma CamelCased diferente a la base de datos. ej: entidad en DB: "tb_nombre_tabla", entidad en symfony: "TbNombreTabla".
+		
+	Do you want to generate the "write" actions [no]? yes crear las opciones de escritura
+		
+	Configuration format (yml, xml, php, or annotation) [annotation]:  formato por defecto (enter) 
+		
+	Routes prefix [/tbnombretabla]: nombretabla  especifica la ruta del crud
+		
+	Do you confirm generation [yes]?  (enter)
+	
+	
+	
+OPERACIONES BASE DE DATOS (desde la db hacia las entidades de symfony)	
+----------------------------------------------------------------------
+	
+	* IMPORTAR BASE DE DATOS EXISTENTE A SYMFONY
+
+		Opción 1
+			1. 	Crear un bundle llamado “DataBundle” si no existe, este bundle no tendrá programación solo almacenara la entidades de la base de datos para ser usadas desde los demás bundles, debe eliminarse toda la funcionalidad que se carga por defecto.
+			2. 	Ejecutar 
+				php app/console doctrine:mapping:convert xml ./src/AT/DataBundle/Resources/config/doctrine/metadata/orm --from-database --force
+			3. 	Ejecutar
+				php app/console doctrine:mapping:import DataBundle annotation
+			4. 	Ejecutar
+				php app/console doctrine:generate:entities DataBundle
+
+		Opción 2
+			php app\console doctrine:mapping:import NameBundle yml mapea toda la base de datos, en la ruta "src/Namespace/NameBundle/Resources/config/doctrine/" se genera un archivo yml por cada tabla de la DB.
+
+			php app\console generate:doctrine:entities NameBundle genera las clases/entidades de las tablas de la DB, genera un archivo por cada tabla
+
+			NOTA: Solo con la opción 2 cuando se realizan estos pasos para actualizar las entidades symfony tras una modificación en la DB el código que se ha editado antes NO se pierde, sin embargo, el comando crea un archivo backup 	(.php~) de cada entidad
+
+
+
+
+	* ACTUALIZAR ENTIDAD DE UNA TABLA DE LA BASE DE DATOS
+
+		1. 	Realizar los cambios en la base de datos
+		2. 	Ejecutar:
+			php app/console doctrine:mapping:convert xml ./src/AT/DataBundle/Resources/config/doctrine/metadata/orm --from-database --force
+		3. 	Ejecutar esto para actualizar unicamente la tabla acutalizada
+			php app/console doctrine:mapping:import DataBundle annotation --filter=”AtNombreTabla”
+		4. 	Ejecutar esto para terminar la acutalizacion de la tabla. IMPORTANTE hacerlo para las tablas que se afecten dado a las relaciones entre ellas 
+			php app/console doctrine:generate:entities DataBundle:AtNombreTabla
+
+
+
+
+OPERACIONES BASE DE DATOS (desde las entidades de symfony a la db)
+-----------------------------------------
+	
+	* Crear entidad 
+
+		php app/console doctrine:generate:entity
+
+		The entity shortcut name: NameBundle:Tabla	 nombre de la entidad
+
+		Configuration format (yml, xml, php or annotation) [annotation]:  se deja el valor por defecto (enter)
+
+		New field name (press <return> to stop adding fields): namefield nombre del campo
+			
+		Field type [string]:  tipo de campo, los tipos de dato son: array, object, boolean, integer, smallint, bigint, string, text, datetime, datetimetz, date, time, decimal, float.
+			
+		Field length [255]:  longitud del campo
+			
+		Do you confirm generation [yes]?  (enter) 
+
+
+	* Crear base de datos con las entidades creadas
+		php app/console doctrine:schema:create
+		
+	* Borrar base de datos
+		php app/console doctrine:schema:drop --force
+
+	* Actualizar base de datos
+		php app\console doctrine:schema:update --force
+
+	* Visualizar codigo SQL generado (funciona con cualquier comando)
+		php app\console doctrine:schema:create --dump-sql 
