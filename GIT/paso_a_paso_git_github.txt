@@ -12,15 +12,15 @@ PASOS PARA TRABAJAR UN REPOSITORIO GITHUB EN UNA CARPETA LOCAL CON TORTOISEGIT
 	4.7 En la barra de tareas se carga un nuevo icono, abrirlo
 	4.8 Click en Add Key y seleccionar la key que se acaba de guardar
 	4.9 Cerrar
-6. Descargar repositorio github y conectarse para realizar cargas al repositorio:
-	6.1 Pararse en la carpeta donde se quiere descargar el repositorio
-	6.2 Click derecho y seleccionar Git clone
-	6.3 en la ventana que se abre pegar la ruta https del repositorio en github
-	6.4 en el campo Load Putty Key seleccionar la key guardada anteriormente
-	6.5 OK
-	6.6 Los archivos ya deben estar en el pc
-7.  Cargar y descargar del repositorio
-	7.1 Descargar
+5. Descargar repositorio github y conectarse para realizar cargas al repositorio:
+	5.1 Pararse en la carpeta donde se quiere descargar el repositorio
+	5.2 Click derecho y seleccionar Git clone
+	5.3 en la ventana que se abre pegar la ruta https del repositorio en github
+	5.4 en el campo Load Putty Key seleccionar la key guardada anteriormente
+	5.5 OK
+	5.6 Los archivos ya deben estar en el pc
+6.  Cargar y descargar del repositorio
+	6.1 Descargar
 		- Click derecho sobre la nueva carpeta
 		- Click en TortoiseGit/pull
 		* Solamente en caso de no haber seleccionado la key antes (si ya se selecciono ignorar esto)
@@ -32,7 +32,7 @@ PASOS PARA TRABAJAR UN REPOSITORIO GITHUB EN UNA CARPETA LOCAL CON TORTOISEGIT
 			- Aceptar
 		- Seleccionar el radiobutton Remote y escojer la conexion que se acaba de crear
 		- OK		
-	7.2 Cargar
+	6.2 Cargar
 		- Click derecho sobre la carpeta
 		- Click en Git commit
 		- Ingresar descripcion de la consignacion(commit)
@@ -49,15 +49,17 @@ PASOS PARA TRABAJAR UN REPOSITORIO GITHUB EN UNA CARPETA LOCAL CON TORTOISEGIT
 		- Seleccionar la conexion que se acaba de crear ("origin")
 		- OK
 		- Si sale un mensaje dar click en si
-8. 	Una vez realizado el paso 7 ya no es necesario tener abierto el programa Pageant ni tampoco es necesario volver a crear las conexiones de carga y descarga
-9. 	IMPORTANTE: TortoiseGit ya puede usarse sin ningun problema, pero, el uso de la key para realizar push y pull a github a traves de tortoiseGit genera conflictos para el uso de push y pull bajo consola.
+7. 	Una vez realizado el paso 7 ya no es necesario tener abierto el programa Pageant ni tampoco es necesario volver a crear las conexiones de carga y descarga
+8. 	IMPORTANTE: TortoiseGit ya puede usarse sin ningun problema, pero, el uso de la key para realizar push y pull a github a traves de tortoiseGit genera conflictos para el uso de push y pull bajo consola.
 	para solucionar el problema se debe generar una key ssh a partir de la putty key para que la consola reconozca la conexion con github (http://serverfault.com/questions/194567/how-to-i-tell-git-for-windows-where-to-find-my-private-rsa-key)
-	9.1 Abrir Git Bash
-	9.2 ejecutar "pwd" en la consola, esto muestra la ruta donde esta el prontuario por defecto (Normalmente C:/users/mi_usuario/)
-	9.3 ir a esa ruta a traves del explorador de windows y crear una carpeta llamada .ssh si no existe
-	9.4 Abrir Puttygen
-	9.5 Click en load y seleccionar la putty key (.ppt) generada anteriormente
-	9.6 Seleccionar Conversions/Export OpenSSH Key
-	9.7 Guardarla en la carpeta .ssh con el nombre de id_rsa
-	9.8 Cerrar y abrir Git Bash. Ahora ya funciona pull y push a traves de TortoiseGit y Git Bash
+	8.1 Abrir Git Bash
+	8.2 ejecutar "pwd" en la consola, esto muestra la ruta donde esta el prontuario por defecto (Normalmente C:/users/mi_usuario/)
+	8.3 ir a esa ruta a traves del explorador de windows y crear una carpeta llamada .ssh si no existe
+	8.4 Abrir Puttygen
+	8.5 Click en load y seleccionar la putty key (.ppt) generada anteriormente
+	8.6 Seleccionar Conversions/Export OpenSSH Key
+	8.7 Guardarla en la carpeta .ssh con el nombre de id_rsa
+	8.8 Cerrar y abrir Git Bash. Ahora ya funciona pull y push a traves de TortoiseGit y Git Bash
+
+* NOTA: para que otras personas puedan hacer push a un repositorio debe agregarse a la lista de colaboradores
 
