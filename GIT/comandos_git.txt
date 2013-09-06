@@ -1,0 +1,95 @@
+COMANDOS GIT
+============
+
+Básicos
+-------
+git help											Ayuda
+git config --global user.name "nombre"				Agregar nombre de usuario en las configuraciones globales
+git config --global user.emal email@domain.com 		Agregar correo de usuario en las configuraciones globales
+git config --global color.ui true					Activar colores en la consola de comandos
+
+git init											Inicializa la carpeta donde este el promtuario como un repositorio git
+git clone <url>										Clonar repositorio remoto en local
+git status											Verifica los cambios sin consignar al escenario
+
+
+Agregar archivos al escenario
+-----------------------------
+git add <listado de archivos>						Adicionar uno o varios archivos nuevos o editados al escenario
+git add --all										Adicionar todos los archivos nuevos o editados al escenario
+git add *.txt										Adicionar todos los archivos nuevos o editados al escenario con extension txt
+git add docs/*.txt 									Adicionar todos los archivos nuevos o editados al escenario con extension txt dentro de la carpeta docs
+git add docs/ 										Adicionar todos los archivos nuevos o editados al escenario dentro de la carpeta docs
+git add "*.txt"										Adicionar todos los archivos nuevos o editados al escenario con extension txt en todo el proyecto
+
+
+Consignaciones al repositorio local (commit)
+--------------------------------------------
+git commit -m "Mensaje descriptivo" 				Consignar los cambios. Crea una instantánea del escenario y la adicina a la línea de trabajo.
+													El mensaje debe estar en presente
+git commit -a -m "Mensaje descriptivo"				"-a" adiciona todos los archivos con cambios. No adiciona archivos que estén fuera del escenario
+git commit --amend -m "Mensaje descriptivo"			"amend" es para que git sepa que es una modificación  o arreglo de la última consignación, 
+													se puede especificar un nuevo mensaje en la consignación, Cualquier cosa que esté en el escenario 
+													será adicionada a la consignación anterior.
+
+Subir y bajar consignaciones del repositorio central
+----------------------------------------------------
+git push -u origin master							Subir cambios consignados al repositorio remoto. "origin" se refiere al nombre de la conexion con el 
+													repositorio central y "master" es el nombre del branch
+git pull											Bajar los cambios desde el repositorio remoto
+git fetch											Bajar los cambios desde el repositorio remoto sin mezclar los archivos
+
+
+Conexiones con repositorios remotos
+-----------------------------------
+git remote -v										Verificar todos los remotos registrados, Se pueden tener muchos remotos, generalmente el de pruebas, producción y el de seguridad
+git remote r <nombre>								Eliminar un remoto
+git remote show origin								Muestra:
+														Ramas remotas
+														Ramas locales y con cuales remotas mapean o fusionan
+														Ramas locales que referencian a las remotas para push
+	
+
+Revertir cambios en las consignaciones locales
+----------------------------------------------
+git checkout --<archivo>							Devolver la última consignación
+git reset HEAD <archivo>							Remover cambios de escenario: vuelve al estado anterior
+git reset --soft HEAD^								Devolver al escenario solo un paso
+git reset --hard HEAD^								Deshace completamente todos los cambios y la última consignación
+git reset --hard HEAD^^								Las últimas dos consignaciones
+
+
+Branch (Ramas)
+--------------
+git branch 											Muestra las ramas creadas y resalta en la que se esta trabajando actualmente
+git branch <nombre>									Crear una nueva rama
+git branch -r										Puede ver todas las ramas remotas
+git push origin :<rama>								Elimina rama del repositorio remoto
+git branch -d <rama>								Elimina rama del repositorio local
+git branch -D pagos									Forzar eliminacion de rama local
+
+git checkout <rama>									Cambiar a escenario de otra rama
+git merge <nombrerama>								Mezcla la rama que se indica en <nombrerama> a la rama donde se esta trabajando
+git checkout -b <nombrerama>						Crea y se cambia a la nueva rama
+
+git remote prune origin								Eliminar referencia remota de las ramas eliminadas
+
+
+Tags (Etiquetas)
+----------------
+git tag												Muestra las etiquetas creadas
+	
+
+
+ 
+
+
+
+
+
+
+	
+
+
+	
+
