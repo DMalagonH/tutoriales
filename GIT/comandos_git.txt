@@ -78,10 +78,37 @@ git remote prune origin								Eliminar referencia remota de las ramas eliminada
 Tags (Etiquetas)
 ----------------
 git tag												Muestra las etiquetas creadas
-	
+git tag -a <nombre> -m "<mensaje>"					Crear una etiqueta
+git push --tags										Subir etiquetas a remoto
+git checkout <nombretag>							Volver a como estaba el código cuando se liberó con una etiqueta especifica
 
+
+Comparaciones (diff)
+--------------------
+git diff											Muestra cambios de la copia de trabajo
+git diff HEAD										Muestra cambios de la última consignación
+git diff HEAD^										Muestra cambios del padre de la última consignación
+git diff HEAD^^										Muestra cambios del abuelo de la última consignación
+git diff HEAD~5										Muestra cambios de 5 consignaciones atras
+git diff 4fb063f..f5a6ff9							Mostrar diferencias usando los identificadores SHA de dos consignaciones	
+git diff master <rama>								Compara dos ramas
+git blame <archivo> --date short					Para conocer las historia de un cambio que no se entiende
+
+
+Eliminar archivos
+-----------------
+git rm <archivo>									Eliminar archivo del escenario y sistema de archivos
+git rm --cache <archivo>							Eliminar archivo del escenario pero no del sistema de archivo
 
  
+Consultar registro (Historial de consignaciones)
+------------------------------------------------
+git log												Mostrar lista de consignaciones
+git log --since=1.minute.go							Muestra consignaciones de hace 1 minuto
+git log --since=1.day.ago							Muestra consignaciones de hace 1 dia
+git log --since=1.hour.ago							Muestra consignaciones de hace 1 hora
+git log --since=1.month.ago --until=2.weeks.ago		Muestra consignaciones de hace 1 mes hasta hace 2 semanas
+git log --since=2000-01-01 --until=2012-12-21		Muestra consignaciones entre dos fechas
 
 
 
