@@ -11,7 +11,9 @@ OPERACIONES CON DIRECTORIOS
 	* Permisos
 		Permisos a una carpeta y su contenido
 			chmod 0777 -R dir_name
-		
+	
+	* Obtener el peso de una carpeta o archivo
+		du -hlsc dir_name
 		
 ZIP
 ---
