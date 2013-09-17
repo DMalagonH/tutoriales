@@ -111,6 +111,13 @@ git log --since=1.month.ago --until=2.weeks.ago		Muestra consignaciones de hace 
 git log --since=2000-01-01 --until=2012-12-21		Muestra consignaciones entre dos fechas
 
 
+Alias
+-----
+git config --global alias.co checkout				Crea alias co para checkout
+git config --global alias.br branch					Crea alias br para branch
+git config --global alias.ci commit					Crea alias ci para commit	
+git config --global alias.st status					Crea alias st para status
+git config --global alias.aa 'add --all'			Crea alias aa para add --all (agregar todo)
 
 
 
