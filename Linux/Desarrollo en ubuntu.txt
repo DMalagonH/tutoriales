@@ -1,0 +1,57 @@
+XAMPP 1.8.2 http://www.apachefriends.org/en/xampp-linux.html
+============================================================
+
+INSTALACION
+-----------
+1. Descargar xampp-linux-1.8.2-0-installer.run
+2. su
+3. chmod 755 xampp-linux-1.8.2-0-installer.run
+4. ./xampp-linux-1.8.2-0-installer.run
+
+Iniciar/Detener
+---------------
+/opt/lampp/lampp start
+/opt/lampp/lampp stop
+/opt/lampp/lampp restart
+
+IMPORTANT FILES AND DIRECTORIES
+-------------------------------
+
+/opt/lampp/bin/				The XAMPP commands home. /opt/lampp/bin/mysql calls for example the MySQL monitor.
+/opt/lampp/htdocs/			The Apache DocumentRoot directory.
+/opt/lampp/etc/httpd.conf		The Apache configuration file.
+/opt/lampp/etc/my.cnf			The MySQL configuration file.
+/opt/lampp/etc/php.ini			The PHP configuration file.
+/opt/lampp/etc/proftpd.conf		The ProFTPD configuration file. (since 0.9.5)
+/opt/lampp/phpmyadmin/config.inc.php	The phpMyAdmin configuration file.
+
+
+START AND STOP PARAMETERS
+-------------------------
+
+start		Starts XAMPP.
+stop		Stops XAMPP.
+restart		Stops and starts XAMPP.
+startapache	Starts only the Apache.
+startssl	Starts the Apache SSL support. This command activates the SSL support permanently, e.g. if you restarts XAMPP in the future SSL will stay activated.
+startmysql	Starts only the MySQL database.
+startftp	Starts the ProFTPD server. Via FTP you can upload files for your web server (user "nobody", password "lampp"). This command activates the ProFTPD permanently, e.g. if you restarts XAMPP in the future FTP will stay activated.
+stopapache	Stops the Apache.
+stopssl		Stops the Apache SSL support. This command deactivates the SSL support permanently, e.g. if you restarts XAMPP in the future SSL will stay deactivated.
+stopmysql	Stops the MySQL database.
+stopftp		Stops the ProFTPD server. This command deactivates the ProFTPD permanently, e.g. if you restarts XAMPP in the future FTP will stay deactivated.
+security	Starts a small security check programm.
+
+
+NOTEPAD ++
+==========
+
+Instalación
+-----------
+1. Descargar .exe de la página oficial
+2. instalar con el comando wine npp.6.4.5.Installer.exe
+	2.1 Si wine no esta instalado instalarlo: app-get install wine1.4-i386
+
+
+
+	
