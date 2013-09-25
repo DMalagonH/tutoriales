@@ -1,9 +1,9 @@
-XAMPP 1.8.2 http://www.apachefriends.org/en/xampp-linux.html
-============================================================
+XAMPP FOR LINUX 1.8.2 
+=====================
 
-INSTALACION
+Instalación
 -----------
-1. Descargar xampp-linux-1.8.2-0-installer.run
+1. Descargar xampp-linux-1.8.2-0-installer.run http://www.apachefriends.org/en/xampp-linux.html
 2. su
 3. chmod 755 xampp-linux-1.8.2-0-installer.run
 4. ./xampp-linux-1.8.2-0-installer.run
@@ -14,8 +14,8 @@ Iniciar/Detener
 /opt/lampp/lampp stop
 /opt/lampp/lampp restart
 
-IMPORTANT FILES AND DIRECTORIES
--------------------------------
+Archivos y directorios importantes
+----------------------------------
 
 /opt/lampp/bin/				The XAMPP commands home. /opt/lampp/bin/mysql calls for example the MySQL monitor.
 /opt/lampp/htdocs/			The Apache DocumentRoot directory.
@@ -26,8 +26,8 @@ IMPORTANT FILES AND DIRECTORIES
 /opt/lampp/phpmyadmin/config.inc.php	The phpMyAdmin configuration file.
 
 
-START AND STOP PARAMETERS
--------------------------
+Parámetros Iniciar/Detener
+--------------------------
 
 start		Starts XAMPP.
 stop		Stops XAMPP.
@@ -42,6 +42,74 @@ stopmysql	Stops the MySQL database.
 stopftp		Stops the ProFTPD server. This command deactivates the ProFTPD permanently, e.g. if you restarts XAMPP in the future FTP will stay deactivated.
 security	Starts a small security check programm.
 
+Extensiones
+-----------
+* cURL: sudo apt-get install php5-curl
+* intl: sudo apt-get install php5-intl
+
+
+MEMCACHE
+========
+
+Instalación estandar
+--------------------
+
+* memcached: 
+	sudo apt-get install memcached
+* memcache:
+	* sudo apt-get install php5-memcache
+	* sudo gedit /etc/php5/conf.d/memcache.ini
+	* Descomentar ; extension=memcache.so
+
+Instalación para XAMPP FOR LINUX (lampp)
+----------------------------------------
+
+* memcached: 
+	sudo apt-get install memcached
+* memcache:
+	Descargar paquete en http://pecl.php.net/package/memcache
+	Ejecutar como root: su	
+	Descomprimir: tar -xzf memcache-x.x.x.tgz
+	cd memcache-x.x.x
+	Ejecutar:
+		/opt/lampp/bin/phpize
+		./configure --enable-memcache --with-php-config=/opt/lampp/bin/php-config
+		make
+		make install
+	Asegurarse de que instalo : find /opt/lampp/ -name memcache.so
+	Agregar extencion a php.ini: extension=memcache.so
+	Reset apache
+
+
+NETBEANS
+========
+
+* Instalar jdk
+	* sudo add-apt-repository ppa:webupd8team/java
+	* sudo apt-get install oracle-java7-installer
+* Descargar Netbeans para linux en la pagina oficial (.sh)
+* sudo sh NetBeans-7.3-linux.sh
+
+
+GIT
+===
+
+* sudo apt-get install git-core
+
+
+TERMINATOR
+==========
+
+* sudo apt-get install terminator
+
+
+MYSQL WORKBENCH
+===============
+
+* Descargar paquete de http://dev.mysql.com/downloads/tools/workbench/#downloads
+* sudo dpkg -i mysql-workbench-gpl-x.x.x-xxxxxxxxx-xxxx.deb
+* sudo apt-get -f install
+
 
 NOTEPAD ++
 ==========
@@ -52,6 +120,16 @@ Instalación
 2. instalar con el comando wine npp.6.4.5.Installer.exe
 	2.1 Si wine no esta instalado instalarlo: app-get install wine1.4-i386
 
+FILEZILA
+========
 
+* sudo apt-get install filezilla
+
+AMAZON
+======
+
+Conexión con EC2
+----------------
+ssh -i /opt/lampp/altactickey.pem ec2-user@54.225.65.103
 
 	
