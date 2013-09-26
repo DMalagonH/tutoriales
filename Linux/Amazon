@@ -1,0 +1,6 @@
+EC2
+===
+
+ssh -i /path/to/key/mikey.pem name-user@public_dns
+ssh -i /path/to/key/mikey.pem name-user@ip
+

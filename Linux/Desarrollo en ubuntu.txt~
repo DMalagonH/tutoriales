@@ -111,12 +111,6 @@ MYSQL WORKBENCH
 * sudo apt-get -f install
 
 
-FILEZILA
-========
-
-* sudo apt-get install filezilla
-
-
 NOTEPAD ++
 ==========
 
@@ -126,7 +120,10 @@ Instalación
 2. instalar con el comando wine npp.6.4.5.Installer.exe
 	2.1 Si wine no esta instalado instalarlo: app-get install wine1.4-i386
 
+FILEZILA
+========
 
+* sudo apt-get install filezilla
 
 
 	
