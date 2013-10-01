@@ -80,6 +80,15 @@ Instalación para XAMPP FOR LINUX (lampp)
 	Agregar extencion a php.ini: extension=memcache.so
 	Reset apache
 
+APACHE2 (Independiente)
+=======================
+
+Iniciar/Detener
+---------------
+sudo /etc/init.d/apache2 start
+sudo /etc/init.d/apache2 stop
+sudo /etc/init.d/apache2 restart
+
 
 NETBEANS
 ========

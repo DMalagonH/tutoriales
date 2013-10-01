@@ -63,6 +63,8 @@ Branch (Ramas)
 --------------
 git branch 											Muestra las ramas creadas y resalta en la que se esta trabajando actualmente
 git branch <nombre>									Crear una nueva rama
+git checkout -t origin/<rama>						Agregar al repositorio local una rama remota
+git checkout -b <nuevonombre> origin/<ramaremota>	Agregar al repositorio local una rama remota con un nombre distinto
 git branch -r										Puede ver todas las ramas remotas
 git push origin :<rama>								Elimina rama del repositorio remoto
 git branch -d <rama>								Elimina rama del repositorio local
