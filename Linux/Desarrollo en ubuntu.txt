@@ -49,7 +49,6 @@ Extensiones
 * gd: sudo apt-get install php5-gd para funciones relacionadas a imagenes
 
 
-
 MEMCACHE
 ========
 
@@ -81,6 +80,33 @@ Instalación para XAMPP FOR LINUX (lampp)
 	Asegurarse de que instalo : find /opt/lampp/ -name memcache.so
 	Agregar extencion a php.ini: extension=memcache.so
 	Reset apache
+
+APC
+===
+
+Instalación estandar
+--------------------
+* sudo apt-get install php-apc
+* agregar lineas a php.ini:
+	extension=apc.so
+	apc.apc.stat = 0
+	apc.include_once_override = 1
+	apc.shm_size = 64
+
+Instalacion para XAMPP FOR LINUX (lampp) http://www.samclarke.com/2011/10/install-apc-with-xampp-on-linux/
+----------------------------------------
+wget -O apc-latest.tar.gz http://pecl.php.net/get/APC
+tar xvfz apc-latest.tar.gz
+cd APC-3.1.13
+Ejecutar: 
+	/opt/lampp/bin/phpize
+	./configure --with-php-config=/opt/lampp/bin/php-config
+	make
+	sudo make install
+Agregar la extension a php.ini: extension=apc.so
+Reset apache
+
+
 
 APACHE2 (Independiente)
 =======================
