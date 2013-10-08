@@ -125,7 +125,7 @@ NETBEANS
 	* sudo add-apt-repository ppa:webupd8team/java
 	* sudo apt-get install oracle-java7-installer
 * Descargar Netbeans para linux en la pagina oficial (.sh)
-* sudo sh NetBeans-7.3-linux.sh
+* sudo sh netbeans-7.3-linux.sh
 
 
 GIT
