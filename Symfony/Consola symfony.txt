@@ -47,12 +47,11 @@ OPERACIONES BASE DE DATOS (desde la db hacia las entidades de symfony)
 	* IMPORTAR BASE DE DATOS EXISTENTE A SYMFONY
 
 		Opción 1
-			1. 	Crear un bundle llamado “DataBundle” si no existe, este bundle no tendrá programación solo almacenara la entidades de la base de datos para ser usadas desde los demás bundles, debe eliminarse toda la funcionalidad que se carga por defecto.
-			2. 	Ejecutar 
+			1. 	Ejecutar 
 				php app/console doctrine:mapping:convert xml ./src/AT/DataBundle/Resources/config/doctrine/metadata/orm --from-database --force
-			3. 	Ejecutar
+			2. 	Ejecutar
 				php app/console doctrine:mapping:import DataBundle annotation
-			4. 	Ejecutar
+			3. 	Ejecutar
 				php app/console doctrine:generate:entities DataBundle
 
 		Opción 2
