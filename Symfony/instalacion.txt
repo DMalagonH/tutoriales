@@ -1,0 +1,5 @@
+composer: (http://getcomposer.org/download/)
+	curl -sS https://getcomposer.org/installer | php
+	
+Symfony2:
+	php composer.phar create-project symfony/framework-standard-edition
