@@ -1,3 +1,24 @@
+
+LAMPP SERVER
+============
+
+Instalación
+-----------
+
+	* Opcion 1
+	sudo apt-get install lamp-server^
+
+	* Opcion 2 (recomendad)
+	sudo apt-get isntall tasksel
+	sudo tasksel
+
+	* Opcion 3
+	sudo apt-get install apache2
+	sudo apt-get install mysql-server
+	sudo apt-get install php5-* (mod-php5)
+	sudo service apache2 restart
+
+	
 XAMPP FOR LINUX 1.8.2 
 =====================
 
