@@ -52,6 +52,7 @@ git remote show origin								Muestra:
 
 Revertir cambios en las consignaciones locales
 ----------------------------------------------
+git checkout <archivo>								Deshacer cambios en el escenario
 git checkout --<archivo>							Devolver la última consignación
 git reset HEAD <archivo>							Remover cambios de escenario: vuelve al estado anterior
 git reset --soft HEAD^								Devolver al escenario solo un paso
