@@ -36,18 +36,6 @@ LAMPP SERVER
 			apc.apc.stat = 0
 			apc.include_once_override = 1
 			apc.shm_size = 64
-	* XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
-
-
-phpDocumentor
-=============
-
-
-sudo apt-get install php-pear
-pear channel-discover pear.phpdoc.org
-pear install phpdoc/phpDocumentor-alpha
-
-
 
 GIT
 ===

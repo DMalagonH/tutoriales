@@ -85,7 +85,8 @@ git tag -a <nombre> -m "<mensaje>"					Crear una etiqueta
 git push --tags										Subir etiquetas a remoto
 git checkout <nombretag>							Volver a como estaba el código cuando se liberó con una etiqueta especifica
 git clone -b <tag> <link_git>						Clonar un tag especifico
-
+git tag -d <tag>									Eliminar una etiqueta local
+git push origin :refs/tags/<tag>					Eliminar una etiqueta remota
 
 Comparaciones (diff)
 --------------------

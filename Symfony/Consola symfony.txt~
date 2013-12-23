@@ -70,7 +70,7 @@ OPERACIONES BASE DE DATOS (desde la db hacia las entidades de symfony)
 		2. 	Ejecutar:
 			php app/console doctrine:mapping:convert xml ./src/AT/DataBundle/Resources/config/doctrine/metadata/orm --from-database --force
 		3. 	Ejecutar esto para actualizar unicamente la tabla acutalizada
-			php app/console doctrine:mapping:import DataBundle annotation --filter="AtNombreTabla"
+			php app/console doctrine:mapping:import DataBundle annotation --filter=”AtNombreTabla”
 		4. 	Ejecutar esto para terminar la acutalizacion de la tabla. IMPORTANTE hacerlo para las tablas que se afecten dado a las relaciones entre ellas 
 			php app/console doctrine:generate:entities DataBundle:AtNombreTabla
 
