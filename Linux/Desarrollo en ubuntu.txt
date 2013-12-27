@@ -38,6 +38,10 @@ LAMPP SERVER
 			apc.shm_size = 64
 	* XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
 
+AB APACHE
+=========
+sudo apt-get install gnuplot-nox apache2-utils
+
 
 phpDocumentor
 =============
