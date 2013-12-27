@@ -1,0 +1,14 @@
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_PHP_symfony2.html
+
+
+
+1. 	Instalar ruby  http://aws.amazon.com/code/6752709412171743
+	sudo apt-get install ruby irb rdoc
+2. 	Instalar phyton 2.7 o superior (En ubuntu 13.10 ya esta instalado)
+3. 	Descargar AWS Elastic Beanstalk Command Line Tool en http://aws.amazon.com/code/6752709412171743
+	* Descomprimir contenido del .zip en cualquier lugar ("/aws" por ejemplo
+4.	Realizar las configuraciones de composer mencionadas en el paso 2 de http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_PHP_symfony2.html
+5. 	Ejecutar la siguiente linea en la terminal
+	export PATH=$PATH:<path to unzipped EB CLI package>/eb/linux/python2.7/   ("/aws/AWS-ElasticBeanstalk-CLI-2.6.0/eb/linux/python2.7/" por ejemplo)
+6. 		
+	
