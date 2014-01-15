@@ -4,10 +4,12 @@ LAMPP SERVER
 	Instalación
 	-----------
 
-		sudo apt-get install tasksel
-		sudo tasksel
-		Seleccionar lampp server usando la tecla espacio
-		aceptar
+		* sudo apt-get install tasksel
+		* sudo tasksel
+		* Seleccionar lampp server usando la tecla espacio
+		* aceptar
+		* En ubuntu 13.10 agregar la siguiente linea a /etc/apache2/apache2.conf
+			ServerName localhost
 
 	Iniciar/Detener
 	---------------
