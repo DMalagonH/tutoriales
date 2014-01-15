@@ -10,6 +10,8 @@ LAMPP SERVER
 		* aceptar
 		* En ubuntu 13.10 agregar la siguiente linea a /etc/apache2/apache2.conf
 			ServerName localhost
+		* En ubuntu 13.10 agregar la siguiente linea a /etc/php5/apache2/php.ini y /etc/php5/cli/php.ini
+			date.timezone = "America/Bogota"
 
 	Iniciar/Detener
 	---------------
