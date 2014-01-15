@@ -1,4 +1,3 @@
-
 LAMPP SERVER
 ============
 
@@ -42,6 +41,19 @@ AB APACHE
 =========
 sudo apt-get install gnuplot-nox apache2-utils
 
+XHPROF
+======
+	ubuntu 12.04 (https://groups.drupal.org/node/82889)
+	------------
+	* sudo aptitude install python-software-properties
+	* sudo add-apt-repository ppa:brianmercer/php5-xhprof
+	* sudo aptitude update
+	* sudo aptitude install php5-xhprof graphviz
+	
+	ubuntu 13.10
+	* verificar que universe este activo en la fuente de software (centro de software/editar/fuente de software)
+	* sudo apt-get install php5-xhprof
+	
 
 phpDocumentor
 =============
