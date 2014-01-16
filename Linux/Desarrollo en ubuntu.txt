@@ -40,11 +40,11 @@ LAMPP SERVER
 			Para
 	* APC
 		* sudo apt-get install php-apc
-		* agregar lineas a php.ini:
+		* agregar lineas a php.ini (en ubuntu 13.10 no son necesarias):
 			extension=apc.so
 			apc.apc.stat = 0
 			apc.include_once_override = 1
-			apc.shm_size = 64
+			apc.shm_size = 64M
 	* XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
 
 AB APACHE
