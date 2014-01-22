@@ -21,7 +21,7 @@ LAMPP SERVER
 
 	Extensiones
 	-----------
-	* PHP-DEV: sudo apt-get install php-dev
+	* PHP-DEV: sudo apt-get install php5-dev
 	* PEAR: sudo apt-get install php-pear
 	* JSON: sudo apt-get install php5-json
 	* cURL: sudo apt-get install php5-curl
@@ -32,12 +32,10 @@ LAMPP SERVER
 		- Nota: En caso de tener problemas:
 			* sudo apt-get install build-essential
 			* sudo pecl install memcache
-
 	* memcache:
 		* sudo apt-get install php5-memcache
 		* sudo gedit /etc/php5/conf.d/memcache.ini (en ubuntu 13.10 /etc/php5/apache2/php.ini/20-memcache.ini)
 		* Descomentar ; extension=memcache.so
-			Para
 	* APC
 		* sudo apt-get install php-apc
 		* agregar lineas a php.ini (en ubuntu 13.10 no son necesarias):
@@ -61,8 +59,9 @@ XHPROF
 	* sudo aptitude install php5-xhprof graphviz
 	
 	ubuntu 13.10
-	* verificar que universe este activo en la fuente de software (centro de software/editar/fuente de software)
-	* sudo apt-get install php5-xhprof
+	* verificar que universe este activo en la fuente de software (centro de software/editar/origenes de software)
+	* sudo apt-get install php5-xhprof graphviz
+	* agregar extension=xhprof.so en php.ini
 	
 
 phpDocumentor
