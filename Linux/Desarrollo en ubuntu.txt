@@ -51,6 +51,24 @@ sudo apt-get install gnuplot-nox apache2-utils
 
 XHPROF
 ======
+
+	* Descargar o clonar proyecto facebook-xhprof de https://github.com/diego-software/xhprof en la carpeta /var/www por ejemplo
+	* cd /var/www/xhprof/extension/  moverse a la carpeta extension dentro del proyecto
+	* Ejecutar las siguientes lineas.
+		% phpize
+		% ./configure --with-php-config=<path to php-config> (--with-php-config=/usr/bin/php-config)
+		% make
+		% make install
+		% make test		
+	* Agregar las siguientes lineas a php.ini (tener en cuenta los 2 archivos /etc/php5/apache2/php.ini y /etc/php5/cli/php.ini)
+		extension=xhprof.so
+		xhprof.output_dir=<directory_for_storing_xhprof_runs> (/var/www/xhprof/output_dir o /tmp/xhprof por ejemplo)
+	* Para ejecutar xhprof para una aplicación individual se deben copiar los archivos de la carpeta external prepend.php y append.php en el proyecto	
+	* Crear un virtualhost para la aplicacion con los siguientes valores (Estos archivos pueden ser editados segun la necesidad)
+		* php_admin_value auto_prepend_file "/var/www/proyecto/xhprof/prepend_file.php"
+        * php_admin_value auto_append_file "/var/www/proyecto/xhprof/append_file.php"
+	
+	
 	ubuntu 12.04 (https://groups.drupal.org/node/82889)
 	------------
 	* sudo aptitude install python-software-properties
