@@ -147,3 +147,17 @@ Crear instancia RDS
 
 Configurar SES
 ==============
+* Ir a SMTP Settings y dar click en "Create My SMTP Credentials"
+* Crear usuario (IAM) para uso de SES
+* Descargar las credenciales (Estas credenciales no se pueden consultar despues, si se pierden debera crearse un nuevo IAM)
+* Ir a Email Addresses y agregar un correo real desde donde se realizarán los envíos en la aplicación
+* Pueden enviarse correos de prueba entre las direcciones de correo registradas
+* Para poder usar SES en producción debe enviarse la peticion de acceso a producción
+	* Click en Request Production Access
+	* Seleccionar Service Limit Increase
+	* Seleccionar SES Production Access
+	* Seleccionar la region 
+	* Marcar todas las opciones en Pre-Production Checklist
+	* Ingresar una descripción de solicitud de apertura del servicio en ingles
+	* Ingresar la información solicitada del administrador de la cuenta Amazon
+* Para conectarse al servidor se usa el ServerName y el Username y Password del archivo descargado
