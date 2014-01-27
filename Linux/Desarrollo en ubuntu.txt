@@ -27,6 +27,13 @@ LAMPP SERVER
 	* cURL: sudo apt-get install php5-curl
 	* intl: sudo apt-get install php5-intl
 	* gd: sudo apt-get install php5-gd (para funciones relacionadas a imagenes)
+	* APC
+		* sudo apt-get install php-apc
+		* agregar lineas a php.ini (en ubuntu 13.10 no son necesarias):
+			extension=apc.so
+			apc.apc.stat = 0
+			apc.include_once_override = 1
+			apc.shm_size = 64M
 	* memcached: 
 		sudo apt-get install memcached
 		- Nota: En caso de tener problemas:
@@ -36,13 +43,7 @@ LAMPP SERVER
 		* sudo apt-get install php5-memcache
 		* sudo gedit /etc/php5/conf.d/memcache.ini (en ubuntu 13.10 /etc/php5/apache2/php.ini/20-memcache.ini)
 		* Descomentar ; extension=memcache.so
-	* APC
-		* sudo apt-get install php-apc
-		* agregar lineas a php.ini (en ubuntu 13.10 no son necesarias):
-			extension=apc.so
-			apc.apc.stat = 0
-			apc.include_once_override = 1
-			apc.shm_size = 64M
+
 	* XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
 
 AB APACHE
