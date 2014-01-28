@@ -64,6 +64,8 @@ Configuración inicial del servidor
 				apc.apc.stat = 0
 				apc.include_once_override = 1
 				apc.shm_size = 64M
+	* habilitar mod_rewrite (En la configuración por defecto de apache está deshabilitado)
+		sudo a2enmod rewrite
 	* Reiniciar apache (sudo service apache2 restart)
 
 * Instalar GIT
