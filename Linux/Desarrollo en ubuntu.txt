@@ -46,6 +46,12 @@ LAMPP SERVER
 
 	* XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
 
+
+	Habilitar mod_rewrite
+	---------------------
+	* sudo a2enmod rewrite
+	* sudo service apache2 restart
+
 AB APACHE
 =========
 sudo apt-get install gnuplot-nox apache2-utils
