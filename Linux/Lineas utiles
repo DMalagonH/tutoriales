@@ -1,0 +1,10 @@
+* Crear un enlace a una carpeta 
+	ln -s /ruta/carpeta/origen /ruta/carpeta/destino
+
+* Ver el tamaño de una carpeta
+	du -h
+
+* Contar los archivos dentro de una carpeta
+	ls | wc -l		
+	ls -A | wc -l    	Tiene en cuenta archivos ocultos
+	
