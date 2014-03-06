@@ -13,6 +13,22 @@ git clone <url>										Clonar repositorio remoto en local
 git status											Verifica los cambios sin consignar al escenario
 
 
+Enlace con repositorios remotos
+-------------------------------
+git remote add origin <ruta>						Agrega repositorio remoto principal 
+git remote add upstream <ruta>						Agrega reporitorio remoto paralelo	
+git remote set-url origin <newurl> <oldurl>			Cambiar la url del repositorio
+git remote set-url origin <ssh_url> <https_url>		Cambiar la url del repositorio remoto por la ruta para conexion con ssh
+	
+
+Key SSH para conexión al repositorio
+------------------------------------
+
+* Proceso de creacion (http://git-scm.com/book/es/Git-en-un-servidor-Generando-tu-clave-p%C3%BAblica-SSH)
+	cd ~/.ssh										moverse a la carpeta personal para keys ssh
+	ssh-keygen										Generar nueva key
+
+
 Agregar archivos al escenario
 -----------------------------
 git add <listado de archivos>						Adicionar uno o varios archivos nuevos o editados al escenario
