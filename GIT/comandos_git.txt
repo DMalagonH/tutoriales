@@ -7,6 +7,7 @@ git help											Ayuda
 git config --global user.name "nombre"				Agregar nombre de usuario en las configuraciones globales
 git config --global user.email email@domain.com 		Agregar correo de usuario en las configuraciones globales
 git config --global color.ui true					Activar colores en la consola de comandos
+git config --global push.default simple				Configuracion para cuando se realice un "git push" solo se suban los cambios de la rama actual
 
 git init											Inicializa la carpeta donde este el promtuario como un repositorio git
 git clone <url>										Clonar repositorio remoto en local
