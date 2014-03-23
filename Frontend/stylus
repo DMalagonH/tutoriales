@@ -4,3 +4,5 @@
 	stylus -c -w -o css/ stylus/archivo.styl
 * Instalar nib
 	sudo npm install nib -g
+* Compiar con nib
+	stylus -u nib -c -w -o css/ stylus/archivo.styl
