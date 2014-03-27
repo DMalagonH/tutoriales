@@ -7,9 +7,9 @@
 4. 	Pasar Nodejs a la ultima version estable (0.8.4): 		
 		git checkout v0.8.4
 5.  Compilar e instalar NodeJs:		
-		* ./configure
-		* make
-		* sudo make install
+		*	./configure
+		*	make
+		*	sudo make install
 6. 	Generar archivo package.json en el directorio donde se creará el proyecto		
 		{     
 			"name": "miProyecto",    
