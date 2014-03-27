@@ -4,25 +4,25 @@ Instalación del motor
 Link: http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
 
-* Importar clave publica de mongo para ubuntu
+* Importar clave publica de mongo para ubuntu		
 	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 
-* Ejecutar el siguiente comando para crear un archivo de mongoDB
+* Ejecutar el siguiente comando para crear un archivo de mongoDB		
 	echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 
-* Actualizar apt
+* Actualizar apt		
 	sudo apt-get update
 
-* Instalar mongodb
+* Instalar mongodb		
 	sudo apt-get install mongodb-10gen
 
-* Iniciar mongodb
+* Iniciar mongodb		
 	sudo service mongodb start
 
-* Detener mongodb
+* Detener mongodb		
 	sudo service mongodb stop
 
-* Restart mongodb
+* Restart mongodb		
 	sudo service mongodb restart
 
 
@@ -43,16 +43,16 @@ Extensión para PHP
 
 Link: http://www.tecnopedia.net/mongodb/tutorial-instalar-mongodb-en-ubuntu/
 
-* Verificar que la extensión no este instalada
+* Verificar que la extensión no este instalada		
 	php --re mongo
 
-* Instalar extensión
-	sudo pecl install mongo
+* Instalar extensión		
+	sudo pecl install mongo	
 
-* Agregar la siguiente linea al php.ini (/etc/php5/apache2/php.ini Y /etc/php5/cli/php.ini)
+* Agregar la siguiente linea al php.ini (/etc/php5/apache2/php.ini Y /etc/php5/cli/php.ini)		
 	extension=mongo.so
 
-* Reiniciar apache
+* Reiniciar apache		
 	sudo service apache2 restart
 
 	
