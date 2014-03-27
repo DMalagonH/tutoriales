@@ -6,6 +6,8 @@
 	sudo npm install nib -g
 * Compiar con nib		
 	stylus -u nib -c -w -o css/ stylus/archivo.styl
+* Compiar css a stylus		
+ 	 stylus -C css/archivo.css stylus/archivo.styl
 * Instalar css2stylus		
 	sudo npm install -g css2stylus
 * Convertir archivo css a stylus		
