@@ -1,56 +1,60 @@
 LAMPP SERVER
 ============
 
-	Instalación
-	-----------
+Instalación
+-----------
 
-		* sudo apt-get install tasksel
-		* sudo tasksel
-		* Seleccionar lampp server usando la tecla espacio
-		* aceptar
-		* En ubuntu 13.10 agregar la siguiente linea a /etc/apache2/apache2.conf
-			ServerName localhost
-		* En ubuntu 13.10 agregar la siguiente linea a /etc/php5/apache2/php.ini y /etc/php5/cli/php.ini
-			date.timezone = "America/Bogota"
+* sudo apt-get install tasksel
+* sudo tasksel
+* Seleccionar lampp server usando la tecla espacio
+* aceptar
+* En ubuntu 13.10 agregar la siguiente linea a /etc/apache2/apache2.conf
+	ServerName localhost
+* En ubuntu 13.10 agregar la siguiente linea a /etc/php5/apache2/php.ini y /etc/php5/cli/php.ini
+	date.timezone = "America/Bogota"
 
-	Iniciar/Detener
-	---------------
-		sudo /etc/init.d/apache2 start
-		sudo /etc/init.d/apache2 stop
-		sudo /etc/init.d/apache2 restart
+Iniciar/Detener
+---------------
+	sudo /etc/init.d/apache2 start
+	sudo /etc/init.d/apache2 stop
+	sudo /etc/init.d/apache2 restart
+	o
+	sudo service apache2 start
+	sudo service apache2 stop
+	sudo service apache2 restart
 
-	Extensiones
-	-----------
-	* PHP-DEV: sudo apt-get install php5-dev
-	* PEAR: sudo apt-get install php-pear
-	* JSON: sudo apt-get install php5-json
-	* cURL: sudo apt-get install php5-curl
-	* intl: sudo apt-get install php5-intl
-	* gd: sudo apt-get install php5-gd (para funciones relacionadas a imagenes)
-	* APC
-		* sudo apt-get install php-apc
-		* agregar lineas a php.ini (en ubuntu 13.10 no son necesarias):
-			extension=apc.so
-			apc.apc.stat = 0
-			apc.include_once_override = 1
-			apc.shm_size = 64M
-	* memcached: 
-		sudo apt-get install memcached
-		- Nota: En caso de tener problemas:
-			* sudo apt-get install build-essential
-			* sudo pecl install memcache
-	* memcache:
-		* sudo apt-get install php5-memcache
-		* sudo gedit /etc/php5/conf.d/memcache.ini (en ubuntu 13.10 /etc/php5/apache2/php.ini/20-memcache.ini)
-		* Descomentar ; extension=memcache.so
+Extensiones
+-----------
+* PHP-DEV: sudo apt-get install php5-dev
+* PEAR: sudo apt-get install php-pear
+* JSON: sudo apt-get install php5-json
+* cURL: sudo apt-get install php5-curl
+* intl: sudo apt-get install php5-intl
+* gd: sudo apt-get install php5-gd (para funciones relacionadas a imagenes)
+* APC
+	* sudo apt-get install php-apc
+	* agregar lineas a php.ini (en ubuntu 13.10 no son necesarias):
+		extension=apc.so
+		apc.apc.stat = 0
+		apc.include_once_override = 1
+		apc.shm_size = 64M
+* memcached: 
+	sudo apt-get install memcached
+	- Nota: En caso de tener problemas:
+		* sudo apt-get install build-essential
+		* sudo pecl install memcache
+* memcache:
+	* sudo apt-get install php5-memcache
+	* sudo gedit /etc/php5/conf.d/memcache.ini (en ubuntu 13.10 /etc/php5/apache2/php.ini/20-memcache.ini)
+	* Descomentar ; extension=memcache.so
 
-	* XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
+* XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
 
 
-	Habilitar mod_rewrite
-	---------------------
-	* sudo a2enmod rewrite
-	* sudo service apache2 restart
+Habilitar mod_rewrite
+---------------------
+* sudo a2enmod rewrite
+* sudo service apache2 restart
 
 AB APACHE
 =========
@@ -59,88 +63,82 @@ sudo apt-get install gnuplot-nox apache2-utils
 XHPROF
 ======
 
-	* Descargar o clonar proyecto facebook-xhprof de https://github.com/diego-software/xhprof en la carpeta /var/www por ejemplo
-	* cd /var/www/xhprof/extension/  moverse a la carpeta extension dentro del proyecto
-	* Ejecutar las siguientes lineas.
-		% phpize
-		% ./configure --with-php-config=<path to php-config> (--with-php-config=/usr/bin/php-config)
-		% make
-		% make install
-		% make test		
-	* Agregar las siguientes lineas a php.ini (tener en cuenta los 2 archivos /etc/php5/apache2/php.ini y /etc/php5/cli/php.ini)
-		extension=xhprof.so
-		xhprof.output_dir=<directory_for_storing_xhprof_runs> (/var/www/xhprof/output_dir o /tmp/xhprof por ejemplo)
-	* Para ejecutar xhprof para una aplicación individual se deben copiar los archivos de la carpeta external prepend.php y append.php en el proyecto	
-	* Crear un virtualhost para la aplicacion con los siguientes valores (Estos archivos pueden ser editados segun la necesidad)
-		* php_admin_value auto_prepend_file "/var/www/proyecto/xhprof/prepend_file.php"
-        * php_admin_value auto_append_file "/var/www/proyecto/xhprof/append_file.php"
-	
-	
-	ubuntu 12.04 (https://groups.drupal.org/node/82889)
-	------------
-	* sudo aptitude install python-software-properties
-	* sudo add-apt-repository ppa:brianmercer/php5-xhprof
-	* sudo aptitude update
-	* sudo aptitude install php5-xhprof graphviz
-	
-	ubuntu 13.10
-	* verificar que universe este activo en la fuente de software (centro de software/editar/origenes de software)
-	* sudo apt-get install php5-xhprof graphviz
-	* agregar extension=xhprof.so en php.ini
+* Descargar o clonar proyecto facebook-xhprof de https://github.com/diego-software/xhprof en la carpeta /var/www por ejemplo
+* cd /var/www/xhprof/extension/  moverse a la carpeta extension dentro del proyecto
+* Ejecutar las siguientes lineas.
+	% phpize
+	% ./configure --with-php-config=<path to php-config> (--with-php-config=/usr/bin/php-config)
+	% make
+	% make install
+	% make test		
+* Agregar las siguientes lineas a php.ini (tener en cuenta los 2 archivos /etc/php5/apache2/php.ini y /etc/php5/cli/php.ini)
+	extension=xhprof.so
+	xhprof.output_dir=<directory_for_storing_xhprof_runs> (/var/www/xhprof/output_dir o /tmp/xhprof por ejemplo)
+* Para ejecutar xhprof para una aplicación individual se deben copiar los archivos de la carpeta external prepend.php y append.php en el proyecto	
+* Crear un virtualhost para la aplicacion con los siguientes valores (Estos archivos pueden ser editados segun la necesidad)
+	* php_admin_value auto_prepend_file "/var/www/proyecto/xhprof/prepend_file.php"
+    * php_admin_value auto_append_file "/var/www/proyecto/xhprof/append_file.php"
+
+
+###ubuntu 12.04 (https://groups.drupal.org/node/82889)###
+* sudo aptitude install python-software-properties
+* sudo add-apt-repository ppa:brianmercer/php5-xhprof
+* sudo aptitude update
+* sudo aptitude install php5-xhprof graphviz
+
+###ubuntu 13.10###
+
+* verificar que universe este activo en la fuente de software (centro de software/editar/origenes de software)
+* sudo apt-get install php5-xhprof graphviz
+* agregar extension=xhprof.so en php.ini
 	
 
 phpDocumentor
 =============
-
-
-sudo apt-get install php-pear
-pear channel-discover pear.phpdoc.org
-pear install phpdoc/phpDocumentor-alpha
+	sudo apt-get install php-pear
+	pear channel-discover pear.phpdoc.org
+	pear install phpdoc/phpDocumentor-alpha
 
 CURL
 ====
-	* sudo apt-get install curl
+	sudo apt-get install curl
 
 
 GIT
 ===
-	* sudo apt-get install git-core
+	sudo apt-get install git-core
 
 
 TERMINATOR
 ==========
-
-	* sudo apt-get install terminator
+	sudo apt-get install terminator
 
 
 NETBEANS
 ========
-
-	* Instalar jdk (http://www.ubuntu-guia.com/2012/04/instalar-oracle-java-7-en-ubuntu-1204.html)
-		* sudo add-apt-repository ppa:webupd8team/java
-		* sudo apt-get update
-		* sudo apt-get install oracle-java7-installer
-	* Descargar Netbeans para linux en la pagina oficial (.sh)
-	* sudo sh netbeans-7.x-linux.sh
+* Instalar jdk (http://www.ubuntu-guia.com/2012/04/instalar-oracle-java-7-en-ubuntu-1204.html)
+	* sudo add-apt-repository ppa:webupd8team/java
+	* sudo apt-get update
+	* sudo apt-get install oracle-java7-installer
+* Descargar Netbeans para linux en la pagina oficial (.sh)
+* sudo sh netbeans-7.x-linux.sh
 
 
 MYSQL WORKBENCH
 ===============
-
-	* Descargar paquete de http://dev.mysql.com/downloads/tools/workbench/#downloads
-	* sudo dpkg -i mysql-workbench-gpl-x.x.x-xxxxxxxxx-xxxx.deb
-	* sudo apt-get -f install
+* Descargar paquete de http://dev.mysql.com/downloads/tools/workbench/#downloads
+* sudo dpkg -i mysql-workbench-gpl-x.x.x-xxxxxxxxx-xxxx.deb
+* sudo apt-get -f install
 
 
 FILEZILA
 ========
-
-	* sudo apt-get install filezilla
+	sudo apt-get install filezilla
 
 VIM
 ===
 
-	* sudo apt-get install vim
+	sudo apt-get install vim
 
 	
 XAMPP FOR LINUX 1.8.2 
