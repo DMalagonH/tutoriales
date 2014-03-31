@@ -27,8 +27,10 @@
 		npm config set registry="http://registry.npmjs.org/"
 8.  Ver versiones instaladas y reemplazarlas en el archivo package.json 		
 			npm list
-9.  Lanzar aplicación sin necesidad de tener la consola abierta					
-		sudo npm install -g forever 				Instalar forever		
-		forever start -l server.log server.js		Lanzar aplicación		
-		tail -f ~/.forever/server.log				Ver el log
+9.  Lanzar aplicación sin necesidad de tener la consola abierta	
+
+	sudo npm install -g forever 				Instalar forever		
+	forever start -l server.log server.js		Lanzar aplicación		
+	tail -f ~/.forever/server.log				Ver el log
+	forever stop -l server.log server.js		Detener la apliación
 	
