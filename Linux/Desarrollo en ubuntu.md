@@ -49,7 +49,10 @@ Extensiones
 	* Descomentar ; extension=memcache.so
 
 * XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
-
+* IMAP:
+	* sudo apt-get install php5-imap
+	* sudo php5enmod imap
+	* sudo service apache2 restart
 
 Habilitar mod_rewrite
 ---------------------
