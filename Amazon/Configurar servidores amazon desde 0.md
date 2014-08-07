@@ -59,7 +59,7 @@ Configuración inicial del servidor
 		* sudo apt-get install php5-intl
 		* sudo apt-get install php5-gd
 		* sudo apt-get install php-apc
-			* agregar lineas a php.ini
+			* agregar lineas a php.ini (No es necesario en las ultimas versiones de apache)
 				extension=apc.so
 				apc.apc.stat = 0
 				apc.include_once_override = 1
@@ -82,7 +82,7 @@ Creacion de volumen EBS para almacenamiento
 * Conectarce a la instancia con ssh
 * ejecutar la siguiente linea para ver los volumenes adjunatos a la instancia 
 	* lsblk
-	* deben aparecer 2 volumenes root y el volumen que creamos (para el que el MOUNTPOINT aparece como / es root, el otro es el nuestro) 
+	* deben aparecer 2 volumenes root y el volumen que creamos (para el que el MOUNTPOINT aparece como / es root, el otro es el recien creado) 
 	* Verificar el nombre del volumen que creamos (xvdf en caso de ubuntu)
 	* Con este nombre ya sabemos que el volumen esta montado en /dev/xvdf (la salida de lsblk quita el prefijo /dev por ello debemos tenerla en cuenta)
 * Dar formato al volumen
@@ -107,7 +107,9 @@ Creacion de volumen EBS para almacenamiento
 Configurar Host
 ---------------
 * Crear copia de seguridad del sitio por defecto de apache
-	sudo cp /etc/apache2/sites-availables/default /etc/apache2/sites-available/default.orig
+	sudo cp /etc/apache2/sites-availables/000-default.conf /etc/apache2/sites-available/000-default.orig.conf
+* Abrir archivo
+	sudo vim /etc/apache2/sites-availables/000-default.conf
 * Agregar 
 	ServerName midominio.com (o localhost para acceder con la ip unicamente)
 * Editar la dirección de correo en ServerAdmin
@@ -117,6 +119,8 @@ Configurar Host
 	<Directory /var/www/>
 	por
 	<Directory /vol/> (si el proyecto se encuentra en otra carpeta dentro de /vol se puede indicar la ruta completa)
+* Agregar ServerName en /etc/apache2/apache2.conf
+	ServerName localhost (o el dominio)
 * sudo service apache2 restart
 
 
