@@ -47,7 +47,8 @@ Extensiones
 	* sudo apt-get install php5-memcache
 	* sudo gedit /etc/php5/conf.d/memcache.ini (en ubuntu 13.10 /etc/php5/apache2/conf.d/20-memcache.ini)
 	* Descomentar ; extension=memcache.so
-
+* Mongo
+ 	sudo apt-get install php5-mongo
 * XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
 * IMAP:
 	* sudo apt-get install php5-imap
