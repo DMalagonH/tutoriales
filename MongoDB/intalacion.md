@@ -41,18 +41,4 @@ Comandos básicos de mongo en CLI
 Extensión para PHP
 ==================
 
-Link: http://www.tecnopedia.net/mongodb/tutorial-instalar-mongodb-en-ubuntu/
-
-* Verificar que la extensión no este instalada		
-	php --re mongo
-
-* Instalar extensión		
-	sudo pecl install mongo	
-
-* Agregar la siguiente linea al php.ini (/etc/php5/apache2/php.ini Y /etc/php5/cli/php.ini)		
-	extension=mongo.so
-
-* Reiniciar apache		
-	sudo service apache2 restart
-
-	
+	sudo apt-get install php5-mongo
