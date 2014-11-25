@@ -43,13 +43,16 @@ Extensiones
 	- Nota: En caso de tener problemas:
 		* sudo apt-get install build-essential
 		* sudo pecl install memcache
-* memcache:
+* memcache:	
 	* sudo apt-get install php5-memcache
 	* sudo gedit /etc/php5/conf.d/memcache.ini (en ubuntu 13.10 /etc/php5/apache2/conf.d/20-memcache.ini)
 	* Descomentar ; extension=memcache.so
-* Mongo
+* Mongo	
  	sudo apt-get install php5-mongo
-* XSL: sudo apt-get install php5-xsl (para generacion de documentacion)
+* Redis	
+ 	sudo apt-get install php5-redis
+* XSL: 	
+	sudo apt-get install php5-xsl (para generacion de documentacion)
 * IMAP:
 	* sudo apt-get install php5-imap
 	* sudo php5enmod imap
@@ -116,6 +119,47 @@ GIT
 TERMINATOR
 ==========
 	sudo apt-get install terminator
+
+NODEJS
+======
+* Instalar:		
+	sudo apt-get install build-essential git-core libssl-dev libssl0.9.8
+* Clonar el repositorio:		
+	git clone git://github.com/joyent/node
+* Ubicarce en la carpeta del repositorio clonado:		
+	cd node
+* Pasar Nodejs a la ultima version estable:		
+	git checkout vx.x.x
+* Compilar e instalar NodeJs:		
+	./configure
+	make
+	sudo make install
+* Si hay problemas con certificado SSL cambiar la siguiente configuracion		
+	npm config set registry="http://registry.npmjs.org/"
+
+MONGODB
+=======
+
+* Importar clave publica de mongo para ubuntu	
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+* Ejecutar el siguiente comando para crear un archivo de mongoDB	
+	echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+* Actualizar apt	
+	sudo apt-get update
+* Instalar mongodb	
+	sudo apt-get install mongodb-10gen
+* Iniciar mongodb	
+	sudo service mongodb start
+* Detener mongodb	
+	sudo service mongodb stop
+* Restart mongodb	
+	sudo service mongodb restart
+
+REDIS
+=====
+	sudo apt-add-repository ppa:chris-lea/redis-server
+	sudo apt-get update
+	sudo apt-get install redis-server
 
 
 NETBEANS
