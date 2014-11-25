@@ -1,7 +1,7 @@
 ##Configuraciónes frecuentes de php.ini
     date.timezone = America/Bogota
     short_open_tag = Off
-    memory_limit = 128M
+    memory_limit = 1024M
     post_max_size = 1000M
     upload_max_filesize = 1000M
     max_file_uploads = 1000
