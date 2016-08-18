@@ -31,6 +31,7 @@ Extensiones
 * cURL: sudo apt-get install php5-curl
 * intl: sudo apt-get install php5-intl
 * gd: sudo apt-get install php5-gd (para funciones relacionadas a imagenes)
+* imagick: sudo apt-get install php5-imagick (para funciones relacionadas a imagenes)
 * APC
 	* sudo apt-get install php-apc
 	* agregar lineas a php.ini (en ubuntu 13.10 no son necesarias):
