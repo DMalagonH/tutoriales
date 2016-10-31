@@ -33,6 +33,7 @@
 
 #### Módulos globales
 * `sudo npm -g install forever`
+*  sudo npm -g install forever-service
 * `sudo npm -g install grunt`
 
 ## MongoDB [Fuente](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-14-04)
@@ -55,3 +56,14 @@
 * `sudo make install`
 * `cd utils`
 * `sudo ./install_server.sh`
+
+## wkhtmltox (html a pdf y jpg)
+#### Instalar
+* `sudo add-apt-repository ppa:ecometrica/servers`
+* `sudo apt-get update`
+* `sudo apt-get install wkhtmltopdf`  
+#### Descagar paquete
+* `wget http://download.gna.org/wkhtmltopdf/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-amd64.tar.xz` ([Obtener url](http://wkhtmltopdf.org/downloads.html))
+* `tar Jxvf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz`
+* `sudo cp -R wkhtmltox /usr/local/bin/wkhtmltox`
+
