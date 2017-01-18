@@ -136,17 +136,18 @@ Consultar registro (Historial de consignaciones)
 
 Alias
 -----
-	git config --global alias.co checkout				Crea alias co para checkout
-	git config --global alias.br branch					Crea alias br para branch
-	git config --global alias.ci commit					Crea alias ci para commit	
-	git config --global alias.st status					Crea alias st para status
-	git config --global alias.aa 'add --all'			Crea alias aa para add --all (agregar todo)
+	git config --global alias.co checkout			Crea alias co para checkout
+	git config --global alias.br branch			Crea alias br para branch
+	git config --global alias.ci commit			Crea alias ci para commit	
+	git config --global alias.st status			Crea alias st para status
+	git config --global alias.aa 'add --all'		Crea alias aa para add --all (agregar todo)
+	git config --global alias.lol 'log --oneline'		Crea alias para ver commits en formato corto
 
 Formato multiplataforma 
 -----------------------
 	http://stackoverflow.com/questions/5834014/lf-will-be-replaced-by-crlf-in-git-what-is-that-and-is-it-important
 	
-	git config --global core.autocrlf true				Para colaboradores con linux y ubuntu (Configuración por defecto)
+	git config --global core.autocrlf true				Para colaboradores con linux y windows (Configuración por defecto)
 	git config --global core.autocrlf input				Para colaboradores con linux y mac únicamente
 	git config --global core.autocrlf false				Para colaboradores con windows únicamente
 	
