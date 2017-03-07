@@ -18,18 +18,16 @@
 * `sudo get install php7.0 php5.6 php5.6-mysql php-gettext php5.6-mbstring php-xdebug libapache2-mod-php5.6 libapache2-mod-php7.0`
 
 #### Cambiar de PHP 5 a 7
-* sudo a2dismod php5.6
-* sudo a2enmod php7.0
-* sudo service apache2 restart
-* sudo ln -sfn /usr/bin/php7.0 /etc/alternatives/php
-* php -v
+* `sudo a2dismod php5.6; sudo a2enmod php7.0`
+* `sudo service apache2 restart`
+* `sudo ln -sfn /usr/bin/php7.0 /etc/alternatives/php`
+* `php -v`
 
 #### Cambiar de PHP 7 a 5
-* sudo a2dismod php7.0; sudo a2enmod php5.6;
-* sudo a2enmod php5.6
-* sudo service apache2 restart
-* sudo ln -sfn /usr/bin/php7.0 /etc/alternatives/php
-* php -v 
+* `sudo a2dismod php7.0; sudo a2enmod php5.6;`
+* `sudo service apache2 restart`
+* `sudo ln -sfn /usr/bin/php7.0 /etc/alternatives/php`
+* `php -v`
 
 #### Extensiones PHP 5
 
@@ -57,7 +55,7 @@
 
 #### Módulos globales
 * `sudo npm -g install forever`
-*  sudo npm -g install forever-service
+* `sudo npm -g install forever-service`
 * `sudo npm -g install grunt`
 
 ## MongoDB [Fuente](https://www.linode.com/docs/databases/mongodb/install-mongodb-on-ubuntu-16-04)
@@ -67,6 +65,7 @@
 * `echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list`
 * `sudo apt-get update`
 * `sudo apt-get install -y mongodb-org`
+* `sudo systemctl enable mongod`
 
 ## Redis [Fuente](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)
 
