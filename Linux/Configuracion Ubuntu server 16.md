@@ -34,6 +34,7 @@
 #### Extensiones PHP 5
 
 * PHP-DEV: `sudo apt-get install php5.6-dev`
+* XML: `sudo apt-get install php5.6-xml`
 * PEAR: `sudo apt-get install php-pear`
 * JSON: `sudo apt-get install php5.6-json`
 * cURL: `sudo apt-get install php5.6-curl`
