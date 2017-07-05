@@ -26,7 +26,7 @@
 #### Cambiar de PHP 7 a 5
 * `sudo a2dismod php7.0; sudo a2enmod php5.6;`
 * `sudo service apache2 restart`
-* `sudo ln -sfn /usr/bin/php7.0 /etc/alternatives/php`
+* `sudo ln -sfn /usr/bin/php5.6 /etc/alternatives/php`
 * `php -v`
 
 #### Extensiones PHP 5
@@ -48,10 +48,17 @@
 ## GIT
 `sudo apt-get install git-core`
 
-## NodeJS 4 [Fuente](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
+## NodeJS 6 [Fuente](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
 
-* `curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -`
+* `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
 * `sudo apt-get install -y nodejs`
+
+#### Alternar versiones
+* `sudo npm -g install n`
+* `sudo n latest` 
+* `sudo npm n`
+Si al elegir una versión no surte efecto, desinstalar la versión de node instalada a través de apt-get
+* `sudo apt-get remove nodejs`
 
 #### Módulos globales
 * `sudo npm -g install forever`
